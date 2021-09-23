@@ -48,4 +48,19 @@ resource "helm_release" "sets_example2" {
   repository = "https://charts.bitnami.com/bitnami"
   chart      = "redis"
   version    = "6.2"
+
+  set {
+    name = "architecture"
+    value = "standalone"
+  }
+
+  set {
+    name = "redis.replicacount"
+    value = "1"
+  }
+
+  set {
+    name = "auth.password"
+    value = var.password
+  }
 }
