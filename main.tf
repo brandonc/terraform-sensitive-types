@@ -16,6 +16,16 @@ variable "newpassword" {
   sensitive = true
 }
 
+locals {
+  triggers = sensitive({
+    foo = "bar"
+  })
+}
+
+resource "null_resource" "none" {
+  triggers = local.triggers
+}
+
 resource "helm_release" "sets_example1" {
   name       = "redis-rank1"
   repository = "https://charts.bitnami.com/bitnami"
