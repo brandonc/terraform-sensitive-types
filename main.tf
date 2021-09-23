@@ -48,9 +48,4 @@ resource "helm_release" "sets_example2" {
     name = "redis.replicacount"
     value = "1"
   }
-
-  set {
-    name = "auth.password"
-    value = var.newpassword
-  }
 }
