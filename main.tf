@@ -23,6 +23,7 @@ locals {
 }
 
 resource "null_resource" "none" {
+  triggers = local.triggers
 }
 
 resource "helm_release" "sets_example1" {
