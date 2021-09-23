@@ -4,15 +4,15 @@ provider "helm" {
   }
 }
 
-provider "dns" {
-  update {
-    server = "192.168.1.1"
-  }
-}
-
 variable "password" {
   type = string
   default = "password"
+  sensitive = true
+}
+
+variable "newpassword" {
+  type = string
+  default = "newpassword"
   sensitive = true
 }
 
@@ -51,6 +51,6 @@ resource "helm_release" "sets_example2" {
 
   set {
     name = "auth.password"
-    value = var.password
+    value = var.newpassword
   }
 }
