@@ -1,7 +1,7 @@
 # For testing purposes only
 ---
 
-1. fork this repo
-2. import into Terraform Cloud as a VCS workspace
-3. queue a plan
-4. expand structured plan output
+1. Fork this repo
+2. Import into Terraform Cloud as a VCS workspace
+3. Queue a plan
+4. Expand structured plan output
