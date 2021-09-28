@@ -1,3 +1,7 @@
 # For testing purposes only
 ---
-Import fork as VCS workspace
+
+1. fork this repo
+2. import into Terraform Cloud as a VCS workspace
+3. queue a plan
+4. expand structured plan output
